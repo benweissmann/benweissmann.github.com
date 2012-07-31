@@ -20,6 +20,10 @@ body {
   padding-right: 20px;
 }
 
+.content {
+  padding-top: 20px;
+}
+
 .footer {
   color: #666;
   background: #222;
@@ -43,7 +47,7 @@ body {
 }
 /* not required for sticky footer; just pushes hero down a bit */
 .wrapper > .container {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 @media (max-width: @navbarCollapseWidth) {
@@ -67,8 +71,6 @@ body {
   .navbar .container {
     padding-left: 40px;
   }
-
-  
 
 }
 
@@ -107,6 +109,15 @@ a.more {
   color: lighten(@blue, 20%);
 }
 
+body.index, body.projects, body.resume {
+  @media (max-width: @navbarCollapseWidth) {
+    .wrapper > .container {
+      position: relative;
+      top: -20px;
+      z-index: -1;
+    }
+  }
+}
 
 
 /* index.html */
@@ -168,7 +179,7 @@ body.projects {
     height: 400px;
     position: relative;
 
-    margin: 40px auto 0;
+    margin: 0 auto 40px;
 
     .caption {
       position: absolute;
