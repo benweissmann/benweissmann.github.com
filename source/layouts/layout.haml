@@ -6,11 +6,64 @@
     / Always force latest IE rendering engine or request Chrome Frame
     %meta{:content => "IE=edge,chrome=1", 'http-equiv' => "X-UA-Compatible"}
 
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+
     / Use title if it's in the page YAML frontmatter
-    %title= data.page.title || "Ben Weissmann"
+    %title
+      Ben Weissmann - #{data.page.title}
 
     = stylesheet_link_tag 'all'
-    = javascript_include_tag 'all'
+    = javascript_include_tag 'respond.min.js'
 
   %body{:class => page_classes}
-    = yield
+    .wrapper
+      .navbar.navbar-fixed-top
+        .navbar-inner
+          .container
+            %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand{:href => "/"} Ben Weissmann
+            .nav-collapse
+              %ul.nav
+                %li.index
+                  %a{:href => "/"}
+                    %i.icon-home
+                    Home
+                %li.projects
+                  %a{:href => "/projects.html"}
+                    %i.icon-wrench
+                    Projects
+                %li.resume
+                  %a{:href => "/resume.html"}
+                    %i.icon-file
+                    Résumé
+                %li.contact
+                  %a{:href => "/contact.html"}
+                    %i.icon-envelope
+                    Contact
+    
+    
+      .container
+        .content= yield
+        .push
+
+    .footer
+      .container
+        %p Copyright &copy; 2012, Ben Weissmann
+
+    #photo
+
+    = javascript_include_tag 'all'
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-15634484-1']);
+      _gaq.push(['_setDomainName', 'benweissmann.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

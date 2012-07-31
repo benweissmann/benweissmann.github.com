@@ -1,2 +1,3 @@
-    //= require_directory ../lib/bootstrap/js
-    //= require_tree .
+//= require jquery-1.7.2.min.js
+//= require bootstrap.min.js
+//= require_tree .
