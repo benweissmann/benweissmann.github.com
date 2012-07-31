@@ -146,6 +146,7 @@ body.index {
   .content {
     position: absolute;
     right: 10%;
+    top: 80px;
 
     background-color: rgba(0, 0, 0, 0.75);
     color: white;
@@ -154,17 +155,22 @@ body.index {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-bottom: 40px;
+
   }
 
   @media (max-width: @navbarCollapseWidth) {
     .content {
-      margin-top: -18px;
+      top: 0px;
     }
   }
 
   .wrapper > .container {
     background-color: transparent;
     box-shadow: none;
+  }
+
+  .push {
+    min-height: 600px;
   }
     
 }
