@@ -126,28 +126,40 @@ body.index {
   -o-background-size: cover;
   background-size: cover;
 
-  @media (max-width: 1680px) {
-    background-image: url(../img/photo-1680.jpg);
+  @media (max-width: 1680px){
+    @media  (max-height: 1120px) {
+      background-image: url(../img/photo-1680.jpg);
+    }
   }
 
-  @media (max-width: 1280px) {
-    background-image: url(../img/photo-1280.jpg);
+  @media (max-width: 1280px){
+    @media  (max-height: 853px) {
+      background-image: url(../img/photo-1280.jpg);
+    }
   }
 
-  @media (max-width: 1024px) {
-    background-image: url(../img/photo-1024.jpg);
+  @media (max-width: 1024px){
+    @media  (max-height: 902px) {
+      background-image: url(../img/photo-1024.jpg);
+    }
   }
 
   @media (max-width: 720px) {
-    background-image: url(../img/photo-720.jpg);
+    @media (max-height: 634px) {
+      background-image: url(../img/photo-720.jpg);
+    }
   }
 
   @media (max-width: 640px) {
-    background-image: url(../img/photo-640.jpg);
+    @media (max-height: 564px) {
+      background-image: url(../img/photo-640.jpg);
+    }
   }
 
   @media (max-width: 320px) {
-    background-image: url(../img/photo-320.jpg);
+    @media (max-height: 282px) {
+      background-image: url(../img/photo-320.jpg);
+    }
   }
 
   .content {
@@ -207,23 +219,23 @@ body.projects {
   }
 
   .project-img.mitdoodle {
-    background-image: url('http://placekitten.com/600/400');
+    background-image: url('/img/mitdoodle-600.png');
   }
 
   .project-img.zephyrmobile {
-    background-image: url('http://placekitten.com/600/400');
+    background-image: url('/img/zmobile-600.png');
   }
 
-  .project-img.pictivator {
-    background-image: url('http://placekitten.com/600/400');
+  .project-img.ldap-rails {
+    background-image: url('/img/ldap-600.png');
   }
 
   .project-img.karate {
-    background-image: url('http://placekitten.com/600/400');
+    background-image: url('/img/karate-600.png');
   }
 
   .project-img.rise {
-    background-image: url('http://placekitten.com/600/400');
+    background-image: url('/img/rise-600.png');
   }
 
   @media (max-width: 767px) {
@@ -239,23 +251,23 @@ body.projects {
     }
 
     .project-img.mitdoodle {
-      background-image: url('http://placekitten.com/300/200');
+      background-image: url('/img/mitdoodle-300.png');
     }
 
     .project-img.zephyrmobile {
-      background-image: url('http://placekitten.com/300/200');
+      background-image: url('/img/zmobile-300.png');
     }
 
-    .project-img.pictivator {
-      background-image: url('http://placekitten.com/300/200');
+    .project-img.ldap-rails {
+      background-image: url('/img/ldap-300.png');
     }
 
     .project-img.karate {
-      background-image: url('http://placekitten.com/300/200');
+      background-image: url('/img/karate-300.png');
     }
 
     .project-img.rise {
-      background-image: url('http://placekitten.com/300/200');
+      background-image: url('/img/rise-300.png');
     }
   }
 
@@ -268,6 +280,7 @@ body.contact {
     h1 a {
       display: block;
       font-size: @baseFontSize * 1.5;
+      word-wrap: break-word;
     }
   }
 }
