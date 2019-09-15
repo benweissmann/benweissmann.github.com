@@ -11,3 +11,18 @@ background-image: url('/img/oplogtoredis-600.png');
 .project-img.getmicro {
 background-image: url('/img/getmicro-600.png');
 }
+
+
+@media (max-width:767px) {
+  .project-img.memongo {
+    background-image: url('/img/memongo-300.png');
+    }
+
+    .project-img.oplogtoredis {
+    background-image: url('/img/oplogtoredis-300.png');
+    }
+
+    .project-img.getmicro {
+    background-image: url('/img/getmicro-300.png');
+    }
+}
